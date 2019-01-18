@@ -37,3 +37,31 @@ Molemmat laitteet käyttävät ESP8266-pohjaista Wemos-mikrokontrolleria pohjana
 7. Muokkaa koodia (ainakin Wifi-tunnuksesi!) ja ohjelmoi se Wemokseen upload-nappia painamalla!
 
 *Molempien laitteiden yksityiskohtaiset rakennusohjeet löydät Mikrobitin artikkelista.*
+
+## Nexa-kaukosäätimen lähetinkoodin selvittäminen
+
+Mqtt-Nexa-silta tarvitsee toimiakseen Nexa-kaukosäätimen lähetinkoodin, jonka saa nuuskittua kaukosäätimestä NewRemoteSwitch-kirjaston avulla.
+
+Asennettuasi NewRemoteSwitch-kirjaston, avaa kirjaston ShowReceivedCode -esimerkkikoodi, kiinnitä 433 MHz vastaanotinmoduuli (GND, 5V ja D2) kiinni Wemokseesi.
+
+`NewRemoteReceiver::init(D2, 2, showCode);`
+
+Vaihda init-funktion pinni D2:een ja avaa sarjaportti (oikealla nopeudella)! Painele kaukosäätimen nappeja yksitellen. Toivottavasti sarjaportissa alkaa näkyä tämänkaltaisia viestejä nexa-kaukosäätimeltäsi:
+
+```
+Addr 12345678 unit 0 on, period: 266us.
+Addr 12345678 unit 0 off, period: 266us.
+Addr 12345678 unit 1 on, period: 266us.
+Addr 12345678 unit 1 off, period: 265us.
+Addr 12345678 unit 2 on, period: 266us.
+Addr 12345678 unit 2 off, period: 266us.
+Addr 12345678 group off, period: 266us.
+```
+
+Ota osoite ja periodi talteen, ja syötä ne mqtt-nexa-sillan ohjelmakoodiin riville 29:
+
+```
+#define NEXA_ADDRESS 12345678
+...
+NewRemoteTransmitter transmitter(12345678, TRANCIEVER_PIN, 266, 2);
+```
