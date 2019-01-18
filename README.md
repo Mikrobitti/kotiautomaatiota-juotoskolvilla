@@ -71,5 +71,5 @@ Ota osoite ja periodi talteen, ja syötä ne mqtt-nexa-sillan ohjelmakoodiin riv
 ```
 #define NEXA_ADDRESS 12345678
 ...
-NewRemoteTransmitter transmitter(12345678, TRANCIEVER_PIN, 266, 2);
+NewRemoteTransmitter transmitter(NEXA_ADDRESS, TRANCIEVER_PIN, 266, 2);
 ```
