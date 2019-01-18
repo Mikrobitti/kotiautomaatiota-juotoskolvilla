@@ -38,11 +38,15 @@ Molemmat laitteet käyttävät ESP8266-pohjaista Wemos-mikrokontrolleria pohjana
 
 *Molempien laitteiden yksityiskohtaiset rakennusohjeet löydät Mikrobitin artikkelista.*
 
+## Testikoodit
+
+Kansiosta [testikoodit](./testikoodit) löyyty koodinpätkät dht22- ja mhz-14 -anturien, sekä mqtt-palvelimen testaamiseen wemoksella. Anturit ja MQTT-yhteys kannattaa testata näillä esimerkkikoodeilla erikseen ennen laitteiden rakentamista.
+
 ## Nexa-kaukosäätimen lähetinkoodin selvittäminen
 
 Mqtt-Nexa-silta tarvitsee toimiakseen Nexa-kaukosäätimen lähetinkoodin, jonka saa nuuskittua kaukosäätimestä NewRemoteSwitch-kirjaston avulla.
 
-Asennettuasi NewRemoteSwitch-kirjaston, avaa kirjaston ShowReceivedCode -esimerkkikoodi, kiinnitä 433 MHz vastaanotinmoduuli (GND, 5V ja D2) kiinni Wemokseesi.
+Asennettuasi NewRemoteSwitch-kirjaston, avaa kirjaston ShowReceivedCode -esimerkkikoodi, ja kiinnitä 433 MHz vastaanotinmoduuli (GND, 5V ja D2) kiinni Wemokseesi.
 
 `NewRemoteReceiver::init(D2, 2, showCode);`
 

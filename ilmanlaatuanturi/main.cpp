@@ -66,6 +66,10 @@ void setup() {
 
     mqtt.disconnect();
 
+    // Huom! Jotta deepsleep toimisi Wemoksessa kunnolla,
+    // varmista, että olet juottanut Wemoksen pohjassa sijaitsevan
+    // sleep-hyppylangan kiinni. Vanhemmilla Wemoksilla riittää,
+    // että yhdistät D0 ja RST -pinnit pienellä johdonpätkällä.
     Serial.println("Entering deepsleep");
     ESP.deepSleep(SLEEP_DURATION);
 }
