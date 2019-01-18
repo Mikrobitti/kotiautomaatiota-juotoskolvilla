@@ -12,10 +12,14 @@ Rakennettavat laitteet on jaettu omiin kansioihinsa ohjelmakoodeineen ja 3d-mall
 ├── ilmanlaatuanturi
 │   ├── 3d-mallit
 │   └── main.cpp
-└── mqtt-nexa-silta
-    ├── 3d-mallit
-    ├── NewRemoteSwitch.zip
-    └── main.cpp
+├── mqtt-nexa-silta
+│   ├── 3d-mallit
+│   ├── NewRemoteSwitch.zip
+│   └── main.cpp
+└── testikoodit
+    ├── dht22-testi.cpp
+    ├── mhz-14-testi.cpp
+    └── mqtt-testi.cpp
 ```
 
 ## Asennus ja käyttöönotto
