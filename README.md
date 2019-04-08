@@ -1,4 +1,4 @@
-# Kotiautomaatiota kolvinvarresta
+# Kotiautomaatiota juotoskolvilla
 
 Oheisesta repositoriosta löytyy tarvittava tieto Mikrobitin numeron (x/19) artikkelin 'Kotiautomaatiota kolvinvarresta' värkkäilyihin.
 
