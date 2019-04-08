@@ -13,7 +13,7 @@
 #define MQTT_BROKER_IP "raspberry.local"
 
 // Vaihda tähän haluamasi aihe, jolle anturi julkaisee viestejä
-#define MQTT_TOPIC "rooms/bedroom/sensors/1"
+#define MQTT_TOPIC "rooms/bedroom/nexa"
 
 // Nexa-lähetin on kiinni pinnissä D3
 #define TRANCIEVER_PIN D3
