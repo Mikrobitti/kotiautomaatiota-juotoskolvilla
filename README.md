@@ -1,6 +1,6 @@
 # Kotiautomaatiota juotoskolvilla
 
-Oheisesta repositoriosta löytyy tarvittava tieto Mikrobitin numeron (x/19) artikkelin 'Kotiautomaatiota kolvinvarresta' värkkäilyihin.
+Oheisesta repositoriosta löytyy tarvittava tieto huhtikuun 2019 Mikrobitin 'Kotiautomaatiota kolvinvarresta' värkkäilyihin.
 
 ## Tiedostot
 
